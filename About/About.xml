@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Vanilla Brewing Expanded - Coffees and Teas</name>
+	<author>Sarg Bjornson, Chowder</author>
+	<supportedVersions>
+
+		
+		<li>1.2</li>
+	</supportedVersions>
+	<packageId>VanillaExpanded.VBrewECandT</packageId>
+	<modDependencies>
+		<li>
+			<packageId>VanillaExpanded.VBrewE</packageId>
+			<displayName>Vanilla Brewing Expanded</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858</steamWorkshopUrl>
+			<downloadUrl>https://github.com/juanosarg/VanillaBrewingExpanded/releases</downloadUrl>
+		</li>
+
+	</modDependencies>
+	<description>Vanilla Brewing Expanded - Coffees and Teas
+	</description>
+</ModMetaData>
