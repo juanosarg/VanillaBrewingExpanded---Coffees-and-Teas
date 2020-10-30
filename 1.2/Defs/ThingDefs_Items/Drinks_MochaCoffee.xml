@@ -4,7 +4,7 @@
 	<ThingDef ParentName="DrugBase">
 		<defName>VBE_MochaCoffee</defName>
 		<label>mocha coffee</label>
-		<description>Coffee mixed with sweet and luxurious chocolate. Those of snobbish persuasion would argue mocha is more of a dessert than an actual coffee drink.</description>
+		<description>Coffee mixed with sweet and luxurious chocolate, very fun to drink. Those of snobbish persuasion would argue mocha is more of a dessert than an actual coffee drink.</description>
 		<graphicData>
 			<texPath>Things/Items/Drinks/VBE_MochaCoffee</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
