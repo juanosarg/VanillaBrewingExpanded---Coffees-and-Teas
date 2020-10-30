@@ -5,7 +5,7 @@
 	<ThingDef ParentName="DrugBase">
 		<defName>VBE_BlackTea</defName>
 		<label>black tea</label>
-		<description>A particularly bitter tea cut with creamy milk, wakes one up a bit and relaxes one's mind.</description>
+		<description>A particularly bitter tea cut with creamy milk, relaxes ones mind and helps cure ailments.</description>
 		<graphicData>
 			<texPath>Things/Items/Drinks/VBE_BlackTea</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
