@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Plants Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+
+
+						<ThingDef ParentName="TreeBase">
+							<defName>VBE_LemonTree</defName>
+							<label>lemon tree</label>
+							<description>A tall tree native to both deserts and tropics alike. Bright, sour lemons grow profusely on this tree, some lemons may even mature early and fall to the ground before the primary harvest is ready.</description>
+							<thingClass>VanillaBrewingExpanded.Plant_AutoProduce</thingClass>
+							<graphicData>
+								<texPath>Things/Plants/Trees/VBE_TreeLemon</texPath>
+								<graphicClass>Graphic_Random</graphicClass>
+								<shadowData>
+									<volume>(0.15, 0.3, 0.15)</volume>
+									<offset>(0,0,-0.38)</offset>
+								</shadowData>
+							</graphicData>
+							<selectable>true</selectable>
+
+							<statBases>
+								<Beauty>2</Beauty>
+								<Nutrition>1.25</Nutrition>
+							</statBases>
+							<tickerType>Normal</tickerType>
+							<ingestible />
+							<plant>
+								<dieIfLeafless>false</dieIfLeafless>
+								<growDays>32.51</growDays>
+								<visualSizeRange>0.8~2.0</visualSizeRange>
+								<sowMinSkill>6</sowMinSkill>
+								<sowTags>
+									<li>Ground</li>
+								</sowTags>
+								<fertilityMin>0.7</fertilityMin>
+								<topWindExposure>0.05</topWindExposure>
+								<mustBeWildToSow>false</mustBeWildToSow>
+								<immatureGraphicPath>Things/Plants/Trees/VBE_TreeLemon_Immature</immatureGraphicPath>
+								<leaflessGraphicPath>Things/Plants/Trees/VBE_TreeLemon_Leafless</leaflessGraphicPath>
+								<harvestWork>800</harvestWork>
+								<harvestTag>Standard</harvestTag>
+								<harvestYield>50</harvestYield>
+								<harvestedThingDef>VCE_RawLemon</harvestedThingDef>
+								<harvestFailable>true</harvestFailable>
+								<harvestAfterGrowth>0.20</harvestAfterGrowth>
+							</plant>
+						</ThingDef>
+
+
+
+						<ThingDef ParentName="VCE_FruitFoodRawBase">
+							<defName>VCE_RawLemon</defName>
+							<label>lemons</label>
+							<description>An acid and sour tasting fruit. The juice, zest, and pulp are often used in cooking, often on fish and other meat for better taste. Lemon is also used to flavour drinks, such as lemonade, or mixed with tea and coffee.</description>
+							<soundInteract>Grain_Drop</soundInteract>
+							<soundDrop>Grain_Drop</soundDrop>	
+
+							<graphicData>
+
+								<texPath>Things/Items/Raw/VBE_Lemons</texPath>
+
+							</graphicData>
+							<thingCategories>
+								<li>VCE_Fruit</li>
+							</thingCategories>
+							<statBases>
+								<MarketValue>1.2</MarketValue>
+							</statBases>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>15</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+							</comps>
+
+							<ingestible>
+								<preferability>RawTasty</preferability>
+								<tasteThought/>
+								<foodType>VegetableOrFruit</foodType>
+							</ingestible>    
+						</ThingDef>
+
+						<RecipeDef>
+							<defName>VBE_BrewLemonCoffee</defName>
+							<label>brew espresso romano</label>
+							<description>Brew an already acidic coffee garnished with a wedge of more acidic lemon, meant to be juiced into the coffee before quickly consumed while hot. An acquired taste to be sure but lauded by those who do prefer it.</description>
+							<jobString>Brewing espresso romano.</jobString>
+							<workSkill>Cooking</workSkill>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<workAmount>600</workAmount>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_Brewing</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>	
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+							<recipeUsers>
+								<li>VBE_EspressoMachineBuilding</li>			
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VBE_IceCoffee</li>
+											<li>VBE_HotCoffee</li>
+
+										</thingDefs>
+									</filter>
+									<count>0.7</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VCE_RawLemon</li>
+
+										</thingDefs>
+									</filter>
+									<count>0.5</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>			
+								<thingDefs>
+									<li>VBE_IceCoffee</li>
+									<li>VBE_HotCoffee</li>
+									<li>VCE_RawLemon</li>
+								</thingDefs>
+								<categories>				
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>			
+								<thingDefs>
+									<li>VBE_IceCoffee</li>	
+									<li>VBE_HotCoffee</li>		
+									<li>VCE_RawLemon</li>				
+								</thingDefs>
+								<categories>				
+								</categories>
+							</defaultIngredientFilter>		
+							<products>
+								<VBE_LemonCoffee>10</VBE_LemonCoffee>
+							</products>
+							<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+						</RecipeDef>
+
+						<ThingDef ParentName="DrugBase">
+							<defName>VBE_LemonCoffee</defName>
+							<label>espresso romano</label>
+							<description>A particularly strange combination. Already acidic coffee garnished with a wedge of more acidic lemon, meant to be juiced into the coffee before quickly consumed while hot. An acquired taste to be sure but lauded by those who do prefer it. Specially indicated to combat intestinal parasites.</description>
+
+							<graphicData>
+								<texPath>Things/Items/Drinks/VBE_LemonCoffee</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<thingCategories>
+								<li>VBE_DrinksNonAlcoholic</li>
+							</thingCategories>
+							<tickerType>Rare</tickerType>
+
+							<rotatable>false</rotatable>
+							<stackLimit>25</stackLimit>
+							<statBases>
+								<DeteriorationRate>0.5</DeteriorationRate>
+								<MarketValue>10</MarketValue>
+								<Mass>0.3</Mass>
+								<Flammability>0.5</Flammability>
+								<Nutrition>0.07</Nutrition>
+							</statBases>
+							<ingestible>
+								<foodType>Fluid, Processed, Liquor</foodType>
+								<joyKind>Chemical</joyKind>
+								<joy>0.12</joy>
+								<nurseable>true</nurseable>
+								<drugCategory>Social</drugCategory>
+								<ingestSound>Ingest_Drink</ingestSound>
+								<ingestHoldOffsetStanding>
+									<northDefault>
+										<offset>(0.18,0,0)</offset>
+									</northDefault>
+								</ingestHoldOffsetStanding>
+								<ingestHoldUsesTable>false</ingestHoldUsesTable>
+
+								<ingestCommandString>Drink {0}</ingestCommandString>
+								<ingestReportString>Drinking {0}.</ingestReportString>
+
+								<outcomeDoers>
+									<li Class="IngestionOutcomeDoer_GiveHediff">
+										<hediffDef>VBE_LemonCoffeeHigh</hediffDef>
+										<severity>1</severity>
+										<toleranceChemical>VBE_Caffeine</toleranceChemical>
+									</li>
+									<li Class="IngestionOutcomeDoer_GiveHediff">
+										<hediffDef>VBE_CaffeineTolerance</hediffDef>
+										<severity>0.016</severity>
+										<divideByBodySize>true</divideByBodySize>
+									</li> 
+								</outcomeDoers>
+							</ingestible>
+
+							<techLevel>Neolithic</techLevel>
+							<comps>
+								<li Class="CompProperties_Drug">
+									<chemical>VBE_Caffeine</chemical>
+									<addictiveness>0.005</addictiveness>
+									<minToleranceToAddict>0.25</minToleranceToAddict>
+									<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+									<needLevelOffset>0.9</needLevelOffset>
+									<listOrder>10</listOrder>
+								</li>
+
+								<li Class="CompProperties_Ingredients" />
+
+							</comps>
+
+
+						</ThingDef>
+
+
+
+
+
+
+						<HediffDef>
+							<defName>VBE_LemonCoffeeHigh</defName>
+							<label>lemon coffee high</label>
+							<labelNoun>a lemon coffee high</labelNoun>
+							<description>Caffeine naturally found in coffee once metabolised increases the stimuli in one's nervous system, suppressing ones urge to sleep, as well as clearing ones mind. Increases learning speed by a 15% amount and 15% reduction in rest fall rate. Hot coffee reduces hypothermia. Lemon coffee acts as a remedy against Gut Worms, increasing tending quality with each coffee drank.</description>
+							<hediffClass>VanillaBrewingExpanded.Hediff_HotCoffeeAntiGutWorms</hediffClass>
+							<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+							<scenarioCanAdd>true</scenarioCanAdd>
+							<isBad>false</isBad>
+							<comps>
+								<li Class="HediffCompProperties_Effecter">
+									<stateEffecter>Drunk</stateEffecter>
+									<severityIndices>3~5</severityIndices>
+								</li>
+								<li Class="HediffCompProperties_SeverityPerDay">
+									<severityPerDay>-4.8</severityPerDay>
+									<showHoursToRecover>true</showHoursToRecover>
+								</li>
+							</comps>
+							<stages>
+
+								<li>
+									<restFallFactor>0.85</restFallFactor>
+									<statOffsets>
+										<GlobalLearningFactor>1.15</GlobalLearningFactor>
+
+									</statOffsets>				
+								</li>
+							</stages>
+						</HediffDef>
+
+
+
+						<ThoughtDef>
+							<defName>VBE_LemonCoffeeHigh</defName>
+							<workerClass>ThoughtWorker_Hediff</workerClass>
+							<hediff>VBE_LemonCoffeeHigh</hediff>
+							<validWhileDespawned>true</validWhileDespawned>
+							<stages>
+								<li>
+									<label>Lemony awakening</label>
+									<description>That lemon coffee hit the spot, now let’s get some work done.</description>
+									<baseMoodEffect>3</baseMoodEffect>
+								</li>
+
+							</stages>
+						</ThoughtDef>
+
+
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName = "TemperateSwamp"]/wildPlants</xpath>
+					<value>
+						<VBE_LemonTree>0.01</VBE_LemonTree>
+						
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName = "TropicalRainforest"]/wildPlants</xpath>
+					<value>
+						<VBE_LemonTree>0.01</VBE_LemonTree>
+						
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName = "AridShrubland"]/wildPlants</xpath>
+					<value>
+						<VBE_LemonTree>0.01</VBE_LemonTree>
+						
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

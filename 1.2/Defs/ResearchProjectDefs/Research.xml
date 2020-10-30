@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+	<ResearchProjectDef>
+		<defName>VBE_EspressoMachine</defName>
+		<label>espresso machine</label>
+		<tab>VCE_Brewing</tab>
+		<techLevel>Industrial</techLevel>
+		<description>A more sophisticated method of brewing coffees and teas by using pressurized water.</description>
+		<baseCost>250</baseCost>
+		<researchViewX>0</researchViewX>
+		<researchViewY>2</researchViewY>
+		<prerequisites>			
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+
+
+
+
+</Defs>

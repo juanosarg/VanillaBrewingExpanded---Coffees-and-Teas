@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef>
+		<defName>VBE_MakeCoffeeFast</defName>
+		<label>make espresso coffee</label>
+		<description>Make a warm, bitter beverage usually complemented with milk and sugar. A favorite among students and office workers across the galaxy due to high caffeine content and pleasing aroma. Brewing coffee in a espresso machine is generally much faster.</description>
+		<jobString>Making coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_RawCoffee</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			
+
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_RawCoffee</li>
+				
+			</thingDefs>
+			<categories>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_RawCoffee</li>
+				
+			</thingDefs>
+			<categories>
+				
+			</categories>
+		</defaultIngredientFilter>
+		
+		<products>
+			<VBE_HotCoffee>5</VBE_HotCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+	<RecipeDef>
+		<defName>VBE_ReheatCoffee</defName>
+		<label>reheat iced coffee</label>
+		<description>This espresso machine has a small built-in grill to reheat iced coffee.</description>
+		<jobString>Reheating iced coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_HotCoffee>25</VBE_HotCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_BrewLatteCoffee</defName>
+		<label>brew latte coffee</label>
+		<description>Brew a potent espresso mixed with fresh milk to help ease bitterness before pouring and serving. Lattes have a reputation of being particularly meant for “sophisticated” individuals.</description>
+		<jobString>Brewing latte coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>	
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>
+			<li Name="VBE_MilkIngredient">
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>
+				<li>Milk</li>
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>	
+				<li>VBE_HotCoffee</li>		
+				<li>Milk</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_LatteCoffee>10</VBE_LatteCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_BrewMochaCoffee</defName>
+		<label>brew mocha coffee</label>
+		<description>Brew a coffee mixed with sweet and luxurious chocolate. Those of snobbish persuasion would argue mocha is more of a dessert than an actual coffee drink.</description>
+		<jobString>Brewing mocha coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>	
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>
+				<li>Chocolate</li>
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>	
+				<li>VBE_HotCoffee</li>		
+				<li>Chocolate</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_MochaCoffee>10</VBE_MochaCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>VBE_BrewIrishCoffee</defName>
+		<label>brew irish coffee</label>
+		<description>Brew a drink made with whiskey and coffee blended thoroughly before forming a head and being topped with a spoonful of whipped cream. Perfect for those who just got out of bed and are already wanting to go back to it.</description>
+		<jobString>Brewing irish coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>	
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Whiskey</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>
+				<li>VBE_Whiskey</li>
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>	
+				<li>VBE_HotCoffee</li>		
+				<li>VBE_Whiskey</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_IrishCoffee>10</VBE_IrishCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>VBE_BrewCannibalCoffee</defName>
+		<label>brew cannibal coffee</label>
+		<description>Brew a drink... for a very particular... refined coffee drinker.</description>
+		<jobString>Brewing cannibal coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>	
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Meat_Human</li>
+						
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>
+				<li>Meat_Human</li>
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>	
+				<li>VBE_HotCoffee</li>		
+				<li>Meat_Human</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_CannibalCoffee>10</VBE_CannibalCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+
+
+</Defs>

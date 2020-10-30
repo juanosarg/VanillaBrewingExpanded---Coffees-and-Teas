@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>GeneticRim Dinosauria Patch</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+
+
+
+				<!-- Dino Milk -->
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_BrewLatteCoffee"]/ingredients/li[@Name="VBE_MilkIngredient"]/filter/thingDefs</xpath>
+					<value>
+						<li>GR_DinoMilk</li>
+						
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_BrewLatteCoffee"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_DinoMilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_BrewLatteCoffee"]/defaultIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_DinoMilk</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_MakeBlackTea"]/ingredients/li[@Name="VBE_MilkIngredient"]/filter/thingDefs</xpath>
+					<value>
+						<li>GR_DinoMilk</li>
+						
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_MakeBlackTea"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_DinoMilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_MakeBlackTea"]/defaultIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_DinoMilk</li>
+					</value>
+				</li>
+
+				
+
+
+
+
+
+
+
+
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+
