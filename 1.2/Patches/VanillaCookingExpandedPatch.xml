@@ -368,7 +368,7 @@
 						<ThingDef ParentName="DrugBase">
 							<defName>VBE_DalgonaCoffee</defName>
 							<label>dalgona coffee</label>
-							<description>A trendy, newer drink in the world of coffee rumored to originate from far off steamworlds. Coffee granules are rapidly mixed with sugar to form a thick, luxuriously sweet foam. Afterwards the foam is dispersed over deeply chilled milk before drinking.</description>
+							<description>A trendy, newer drink in the world of coffee rumored to originate from far off steamworlds. Coffee granules are rapidly mixed with sugar to form a thick, luxuriously sweet foam. Afterwards the foam is dispersed over deeply chilled milk before drinking. Arguably the perfect drink to sip on while studying or reading.</description>
 							<graphicData>
 								<texPath>Things/Items/Drinks/VBE_DalgonaCoffee</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
