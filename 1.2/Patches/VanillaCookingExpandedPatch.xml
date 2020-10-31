@@ -125,7 +125,7 @@
 								</li>
 							</stages>
 						</HediffDef>
-						
+
 						<RecipeDef>
 							<defName>VBE_BrewMintCoffee</defName>
 							<label>brew mint coffee</label>
@@ -185,7 +185,7 @@
 							</products>
 							<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
 						</RecipeDef>
-						
+
 						<ThingDef ParentName="DrugBase">
 							<defName>VBE_MintCoffee</defName>
 							<label>mint coffee</label>
@@ -251,7 +251,7 @@
 								</li>
 
 								<li Class="CompProperties_Ingredients" />
-								
+
 							</comps>
 
 
@@ -304,7 +304,7 @@
 
 							</stages>
 						</ThoughtDef>
-						
+
 						<RecipeDef>
 							<defName>VBE_BrewDalgonaCoffee</defName>
 							<label>brew dalgona coffee</label>
@@ -364,7 +364,7 @@
 							</products>
 							<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
 						</RecipeDef>
-						
+
 						<ThingDef ParentName="DrugBase">
 							<defName>VBE_DalgonaCoffee</defName>
 							<label>dalgona coffee</label>
@@ -389,7 +389,7 @@
 							</statBases>
 							<ingestible>
 								<foodType>Fluid, Processed, Liquor</foodType>
-								<joyKind>Chemical</joyKind>
+								<joyKind>VCE_Confectionery</joyKind>
 								<joy>0.13</joy>
 								<nurseable>true</nurseable>
 								<drugCategory>Social</drugCategory>
@@ -430,7 +430,7 @@
 								</li>
 
 								<li Class="CompProperties_Ingredients" />
-								
+
 							</comps>
 
 
@@ -483,6 +483,576 @@
 
 							</stages>
 						</ThoughtDef>
+
+						<RecipeDef>
+							<defName>VBE_MakeGreenTea</defName>
+							<label>make green tea</label>
+							<description>Make a light, citrusy green tea spiked with sugar to create a buttery, almost nutty flavor.</description>
+							<jobString>Making green tea.</jobString>
+							<workSkill>Cooking</workSkill>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<workAmount>600</workAmount>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_Brewing</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>		
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+							<recipeUsers>
+								<li>VBE_EspressoMachineBuilding</li>			
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VBE_Tea</li>
+										</thingDefs>
+									</filter>
+									<count>0.8</count>
+								</li>	
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VCE_RawSugar</li>
+
+										</thingDefs>
+									</filter>
+									<count>3</count>
+								</li>			
+							</ingredients>
+							<fixedIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>	
+									<li>VCE_RawSugar</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>
+									<li>VCE_RawSugar</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</defaultIngredientFilter>		
+							<products>
+								<VBE_GreenTea>10</VBE_GreenTea>
+							</products>
+							<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+						</RecipeDef>
+
+						<ThingDef ParentName="DrugBase">
+							<defName>VBE_GreenTea</defName>
+							<label>green tea</label>
+							<description>A light, citrusy green tea spiked with sugar to create a buttery, almost nutty flavor.</description>
+
+							<graphicData>
+								<texPath>Things/Items/Drinks/VBE_GreenTea</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<thingCategories>
+								<li>VBE_DrinksNonAlcoholic</li>
+							</thingCategories>
+
+							<rotatable>false</rotatable>
+							<stackLimit>25</stackLimit>
+							<statBases>
+								<DeteriorationRate>0.5</DeteriorationRate>
+								<MarketValue>14</MarketValue>
+								<Mass>0.3</Mass>
+								<Flammability>0.5</Flammability>
+								<Nutrition>0.08</Nutrition>
+							</statBases>
+							<ingestible>
+								<foodType>Fluid, Processed</foodType>
+								<joyKind>VCE_Confectionery</joyKind>
+								<joy>0.25</joy>     
+
+								<drugCategory>Social</drugCategory>
+								<ingestSound>Ingest_Drink</ingestSound>
+								<ingestHoldOffsetStanding>
+									<northDefault>
+										<offset>(0.18,0,0)</offset>
+									</northDefault>
+								</ingestHoldOffsetStanding>
+								<ingestCommandString>Drink {0}</ingestCommandString>
+								<ingestReportString>Drinking {0}.</ingestReportString>
+								<ingestHoldUsesTable>false</ingestHoldUsesTable>
+								<tasteThought>VBE_DrankTea</tasteThought>
+							</ingestible>
+
+							<techLevel>Neolithic</techLevel>
+							<comps>     
+
+								<li Class="CompProperties_Drug">
+									<listOrder>1000</listOrder>
+									<overdoseSeverityOffset>0</overdoseSeverityOffset>
+								</li>
+							</comps>
+
+						</ThingDef>
+
+						<RecipeDef>
+							<defName>VBE_MakeMintTea</defName>
+							<label>make mint tea</label>
+							<description>Make black tea leaves mixed with mint leaves and deeply steeped, then garnished with additional mint leaves. Leaves your breath surprisingly fresh.</description>
+							<jobString>Making mint tea.</jobString>
+							<workSkill>Cooking</workSkill>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<workAmount>600</workAmount>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_Brewing</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>		
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+							<recipeUsers>
+								<li>VBE_EspressoMachineBuilding</li>			
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VBE_Tea</li>
+										</thingDefs>
+									</filter>
+									<count>0.8</count>
+								</li>	
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VBE_MintLeaves</li>
+
+										</thingDefs>
+									</filter>
+									<count>3</count>
+								</li>			
+							</ingredients>
+							<fixedIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>	
+									<li>VBE_MintLeaves</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>
+									<li>VBE_MintLeaves</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</defaultIngredientFilter>		
+							<products>
+								<VBE_MintTea>10</VBE_MintTea>
+							</products>
+							<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+						</RecipeDef>
+
+						<ThingDef ParentName="DrugBase">
+							<defName>VBE_MintTea</defName>
+							<label>mint tea</label>
+							<description>Black tea leaves mixed with mint leaves and deeply steeped, then garnished with additional mint leaves. Leaves your breath surprisingly fresh.</description>
+
+							<graphicData>
+								<texPath>Things/Items/Drinks/VBE_MintTea</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<thingCategories>
+								<li>VBE_DrinksNonAlcoholic</li>
+							</thingCategories>
+
+							<rotatable>false</rotatable>
+							<stackLimit>25</stackLimit>
+							<statBases>
+								<DeteriorationRate>0.5</DeteriorationRate>
+								<MarketValue>8</MarketValue>
+								<Mass>0.3</Mass>
+								<Flammability>0.5</Flammability>
+								<Nutrition>0.08</Nutrition>
+							</statBases>
+							<ingestible>
+								<foodType>Fluid, Processed</foodType>
+								<joyKind>Gluttonous</joyKind>
+								<joy>0.12</joy>     
+
+								<drugCategory>Social</drugCategory>
+								<ingestSound>Ingest_Drink</ingestSound>
+								<ingestHoldOffsetStanding>
+									<northDefault>
+										<offset>(0.18,0,0)</offset>
+									</northDefault>
+								</ingestHoldOffsetStanding>
+								<ingestCommandString>Drink {0}</ingestCommandString>
+								<ingestReportString>Drinking {0}.</ingestReportString>
+								<ingestHoldUsesTable>false</ingestHoldUsesTable>
+								<tasteThought>VBE_DrankMintTea</tasteThought>
+							</ingestible>
+
+							<techLevel>Neolithic</techLevel>
+							<comps>     
+
+								<li Class="CompProperties_Drug">
+									<listOrder>1000</listOrder>
+									<overdoseSeverityOffset>0</overdoseSeverityOffset>
+								</li>
+							</comps>
+
+						</ThingDef>
+
+						<ThoughtDef>	
+							<defName>VBE_DrankMintTea</defName>
+							<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+							<hediff>VBE_DrankMintTea</hediff>
+							<durationDays>0.2</durationDays>
+							<stages>
+								<li>
+									<label>Refreshing tea</label>
+									<description>A delightfully fresh cup of mint tea really brightens the day.</description>
+									<baseMoodEffect>3</baseMoodEffect>
+								</li>
+							</stages>	
+
+						</ThoughtDef>
+
+						<HediffDef>
+							<defName>VBE_DrankMintTea</defName>
+							<label>drank mint tea</label>
+							<makesSickThought>false</makesSickThought>
+							<description>Tannins naturally found in tea once metabolised increases the stimuli in ones nervous system, suppressing ones urge to sleep, as well as boosting ones immune system. Increases immunity gain speed by 15% and provides 10% reduction in rest fall rate for 5 hours. Mint tea provides fresh breath, increasing social impact by 10%.</description>
+							<tendable>false</tendable>
+							<isBad>false</isBad>
+							<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+							<hediffClass>HediffWithComps</hediffClass>
+							<initialSeverity>1.0</initialSeverity>
+							<maxSeverity>1.0</maxSeverity>
+							<comps>
+								<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
+									<thoughtDefs>
+										<li>VBE_DrankTea</li>
+									</thoughtDefs>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<restFallFactor>0.90</restFallFactor>
+									<statOffsets>
+										<ImmunityGainSpeedFactor>1.15</ImmunityGainSpeedFactor>
+										<SocialImpact>0.1</SocialImpact>
+									</statOffsets>				
+								</li>
+							</stages>
+						</HediffDef>
+
+						<RecipeDef>
+							<defName>VBE_MakeMasalaChai</defName>
+							<label>make masala chai</label>
+							<description>Make a musty, warm, almost woody tea crafted by simple leaves and complex spices. Alleged to be good against high cholesterol.</description>
+							<jobString>Making masala chai.</jobString>
+							<workSkill>Cooking</workSkill>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<workAmount>600</workAmount>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_Brewing</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>		
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+							<recipeUsers>
+								<li>VBE_EspressoMachineBuilding</li>			
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VBE_Tea</li>
+										</thingDefs>
+									</filter>
+									<count>0.8</count>
+								</li>	
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VCE_RawSpices</li>
+
+										</thingDefs>
+									</filter>
+									<count>3</count>
+								</li>			
+							</ingredients>
+							<fixedIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>	
+									<li>VCE_RawSpices</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>
+									<li>VCE_RawSpices</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</defaultIngredientFilter>		
+							<products>
+								<VBE_MasalaChai>10</VBE_MasalaChai>
+							</products>
+							<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+						</RecipeDef>
+
+						<ThingDef ParentName="DrugBase">
+							<defName>VBE_MasalaChai</defName>
+							<label>masala chai</label>
+							<description>A musty, warm, almost woody tea crafted by simple leaves and complex spices. Alleged to be good against high cholesterol.</description>
+							<graphicData>
+								<texPath>Things/Items/Drinks/VBE_MasalaChai</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<thingCategories>
+								<li>VBE_DrinksNonAlcoholic</li>
+							</thingCategories>
+
+							<rotatable>false</rotatable>
+							<stackLimit>25</stackLimit>
+							<statBases>
+								<DeteriorationRate>0.5</DeteriorationRate>
+								<MarketValue>12</MarketValue>
+								<Mass>0.3</Mass>
+								<Flammability>0.5</Flammability>
+								<Nutrition>0.08</Nutrition>
+							</statBases>
+							<ingestible>
+								<foodType>Fluid, Processed</foodType>
+								<joyKind>Gluttonous</joyKind>
+								<joy>0.12</joy>     
+
+								<drugCategory>Social</drugCategory>
+								<ingestSound>Ingest_Drink</ingestSound>
+								<ingestHoldOffsetStanding>
+									<northDefault>
+										<offset>(0.18,0,0)</offset>
+									</northDefault>
+								</ingestHoldOffsetStanding>
+								<ingestCommandString>Drink {0}</ingestCommandString>
+								<ingestReportString>Drinking {0}.</ingestReportString>
+								<ingestHoldUsesTable>false</ingestHoldUsesTable>
+								<tasteThought>VBE_DrankMasalaChai</tasteThought>
+							</ingestible>
+
+							<techLevel>Neolithic</techLevel>
+							<comps>     
+
+								<li Class="CompProperties_Drug">
+									<listOrder>1000</listOrder>
+									<overdoseSeverityOffset>0</overdoseSeverityOffset>
+								</li>
+							</comps>
+
+						</ThingDef>
+
+						<ThoughtDef>	
+							<defName>VBE_DrankMasalaChai</defName>
+							<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+							<hediff>VBE_DrankMasalaChai</hediff>
+							<durationDays>0.2</durationDays>
+							<stages>
+								<li>
+									<label>Fancied a zesty cuppa</label>
+									<description>A delightfully complex cup of spicy masala chai really brightens the day.</description>
+									<baseMoodEffect>3</baseMoodEffect>
+								</li>
+							</stages>	
+
+						</ThoughtDef>
+
+						<HediffDef>
+							<defName>VBE_DrankMasalaChai</defName>
+							<label>drank masala chai</label>
+							<makesSickThought>false</makesSickThought>
+							<description>Tannins naturally found in tea once metabolised increases the stimuli in ones nervous system, suppressing ones urge to sleep, as well as boosting ones immune system. Increases immunity gain speed by 15% and provides 10% reduction in rest fall rate for 5 hours. Masala chai reduces the effects of Cholesterol if present.</description>
+							<tendable>false</tendable>
+							<isBad>false</isBad>
+							<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+							<hediffClass>HediffWithComps</hediffClass>
+							<initialSeverity>1.0</initialSeverity>
+							<maxSeverity>1.0</maxSeverity>
+							<comps>
+								<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
+									<thoughtDefs>
+										<li>VBE_DrankMasalaChai</li>
+									</thoughtDefs>
+									<hediffReduction>VCE_Cholesterol</hediffReduction>
+									<reductionAmount>0.03</reductionAmount>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<restFallFactor>0.9</restFallFactor>
+									<statOffsets>
+										<ImmunityGainSpeedFactor>1.15</ImmunityGainSpeedFactor>
+
+									</statOffsets>				
+								</li>
+							</stages>
+						</HediffDef>
+						
+						<RecipeDef>
+							<defName>VBE_MakeNoonChai</defName>
+							<label>make noon chai</label>
+							<description>Make an ancient Kashmiri tea mixing tea leaves, a pinch of salt and baking soda, which results in an striking pink beverage that is famous for being not only delicious but also healthy for the body. Very efficient for treating those with a high blood pressure.</description>
+							<jobString>Making noon chai.</jobString>
+							<workSkill>Cooking</workSkill>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<workAmount>600</workAmount>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_Brewing</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>		
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+							<recipeUsers>
+								<li>VBE_EspressoMachineBuilding</li>			
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VBE_Tea</li>
+										</thingDefs>
+									</filter>
+									<count>0.8</count>
+								</li>	
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VCE_Salt</li>
+
+										</thingDefs>
+									</filter>
+									<count>3</count>
+								</li>			
+							</ingredients>
+							<fixedIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>	
+									<li>VCE_Salt</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>			
+								<thingDefs>
+									<li>VBE_Tea</li>
+									<li>VCE_Salt</li>
+
+								</thingDefs>
+								<categories>				
+								</categories>
+							</defaultIngredientFilter>		
+							<products>
+								<VBE_NoonChai>10</VBE_NoonChai>
+							</products>
+							<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+						</RecipeDef>
+						
+						<ThingDef ParentName="DrugBase">
+							<defName>VBE_NoonChai</defName>
+							<label>noon chai</label>
+							<description>An ancient Kashmiri tea mixing tea leaves, a pinch of salt and baking soda, which results in an striking pink beverage that is famous for being not only delicious but also healthy for the body. Very efficient for treating those with a high blood pressure.</description>
+							<graphicData>
+								<texPath>Things/Items/Drinks/VBE_NoonChai</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<thingCategories>
+								<li>VBE_DrinksNonAlcoholic</li>
+							</thingCategories>
+
+							<rotatable>false</rotatable>
+							<stackLimit>25</stackLimit>
+							<statBases>
+								<DeteriorationRate>0.5</DeteriorationRate>
+								<MarketValue>12</MarketValue>
+								<Mass>0.3</Mass>
+								<Flammability>0.5</Flammability>
+								<Nutrition>0.08</Nutrition>
+							</statBases>
+							<ingestible>
+								<foodType>Fluid, Processed</foodType>
+								<joyKind>Gluttonous</joyKind>
+								<joy>0.12</joy>     
+
+								<drugCategory>Social</drugCategory>
+								<ingestSound>Ingest_Drink</ingestSound>
+								<ingestHoldOffsetStanding>
+									<northDefault>
+										<offset>(0.18,0,0)</offset>
+									</northDefault>
+								</ingestHoldOffsetStanding>
+								<ingestCommandString>Drink {0}</ingestCommandString>
+								<ingestReportString>Drinking {0}.</ingestReportString>
+								<ingestHoldUsesTable>false</ingestHoldUsesTable>
+								<tasteThought>VBE_DrankNoonChai</tasteThought>
+							</ingestible>
+
+							<techLevel>Neolithic</techLevel>
+							<comps>     
+
+								<li Class="CompProperties_Drug">
+									<listOrder>1000</listOrder>
+									<overdoseSeverityOffset>0</overdoseSeverityOffset>
+								</li>
+							</comps>
+
+						</ThingDef>
+
+						<ThoughtDef>	
+							<defName>VBE_DrankNoonChai</defName>
+							<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+							<hediff>VBE_DrankNoonChai</hediff>
+							<durationDays>0.2</durationDays>
+							<stages>
+								<li>
+									<label>Fancied a salty cuppa</label>
+									<description>A delightful cup of noon chai really brightens the day.</description>
+									<baseMoodEffect>3</baseMoodEffect>
+								</li>
+							</stages>	
+
+						</ThoughtDef>
+
+						<HediffDef>
+							<defName>VBE_DrankNoonChai</defName>
+							<label>drank noon chai</label>
+							<makesSickThought>false</makesSickThought>
+							<description>Tannins naturally found in tea once metabolised increases the stimuli in ones nervous system, suppressing ones urge to sleep, as well as boosting ones immune system. Increases immunity gain speed by 15% and provides 10% reduction in rest fall rate for 5 hours. Noon chai reduces the effects of High Blood Pressure if present.</description>
+							<tendable>false</tendable>
+							<isBad>false</isBad>
+							<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+							<hediffClass>HediffWithComps</hediffClass>
+							<initialSeverity>1.0</initialSeverity>
+							<maxSeverity>1.0</maxSeverity>
+							<comps>
+								<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
+									<thoughtDefs>
+										<li>VBE_DrankNoonChai</li>
+									</thoughtDefs>
+									<hediffReduction>VCE_HighBloodPressure</hediffReduction>
+									<reductionAmount>0.03</reductionAmount>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<restFallFactor>0.9</restFallFactor>
+									<statOffsets>
+										<ImmunityGainSpeedFactor>1.15</ImmunityGainSpeedFactor>
+
+									</statOffsets>				
+								</li>
+							</stages>
+						</HediffDef>
 
 
 					</value>

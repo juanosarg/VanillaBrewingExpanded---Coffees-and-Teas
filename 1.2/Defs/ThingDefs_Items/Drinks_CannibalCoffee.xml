@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="DrugBase">
-		<defName>VBE_HumanCoffee</defName>
+		<defName>VBE_CannibalCoffee</defName>
 		<label>cannibal coffee</label>
 		<description>For a very particular… refined coffee drinker.</description>
 

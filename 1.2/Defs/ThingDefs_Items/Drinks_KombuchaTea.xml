@@ -82,6 +82,8 @@
 				<thoughtDefs>
 					<li>VBE_DrankKombuchaTea</li>
 				</thoughtDefs>
+				<hediffReduction>VCE_Diabetes</hediffReduction>
+				<reductionAmount>0.03</reductionAmount>
 			</li>
 		</comps>
 		<stages>
