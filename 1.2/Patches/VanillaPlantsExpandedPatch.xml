@@ -35,7 +35,7 @@
 								<Beauty>2</Beauty>
 								<Nutrition>1.25</Nutrition>
 							</statBases>
-							<tickerType>Normal</tickerType>
+							
 							<ingestible />
 							<plant>
 								<dieIfLeafless>false</dieIfLeafless>
