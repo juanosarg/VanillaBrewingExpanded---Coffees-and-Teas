@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+
+	<RecipeDef>
+		<defName>VBE_MakeGreenTea</defName>
+		<label>make green tea</label>
+		<description>Make a light, citrusy green tea spiked with sugar to create a buttery, almost nutty flavor.</description>
+		<jobString>Making green tea.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSugar</li>
+
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>VCE_RawSugar</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>VCE_RawSugar</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_GreenTea>10</VBE_GreenTea>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_MakeMintTea</defName>
+		<label>make mint tea</label>
+		<description>Make black tea leaves mixed with mint leaves and deeply steeped, then garnished with additional mint leaves. Leaves your breath surprisingly fresh.</description>
+		<jobString>Making mint tea.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_MintLeaves</li>
+
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>VBE_MintLeaves</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>VBE_MintLeaves</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_MintTea>10</VBE_MintTea>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_MakeMasalaChai</defName>
+		<label>make masala chai</label>
+		<description>Make a musty, warm, almost woody tea crafted by simple leaves and complex spices. Alleged to be good against high cholesterol.</description>
+		<jobString>Making masala chai.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSpices</li>
+
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>VCE_RawSpices</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>VCE_RawSpices</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_MasalaChai>10</VBE_MasalaChai>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_MakeNoonChai</defName>
+		<label>make noon chai</label>
+		<description>Make an ancient Kashmiri tea mixing tea leaves, a pinch of salt and baking soda, which results in an striking pink beverage that is famous for being not only delicious but also healthy for the body. Very efficient for treating those with a high blood pressure.</description>
+		<jobString>Making noon chai.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_Salt</li>
+
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>VCE_Salt</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>VCE_Salt</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_NoonChai>10</VBE_NoonChai>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
+</Defs>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>VBE_BrewLemonCoffee</defName>
+		<label>brew espresso romano</label>
+		<description>Brew an already acidic coffee garnished with a wedge of more acidic lemon, meant to be juiced into the coffee before quickly consumed while hot. An acquired taste to be sure but lauded by those who do prefer it.</description>
+		<jobString>Brewing espresso romano.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>	
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>
+
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawLemon</li>
+
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>
+				<li>VCE_RawLemon</li>
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>	
+				<li>VBE_HotCoffee</li>		
+				<li>VCE_RawLemon</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_LemonCoffee>10</VBE_LemonCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+
+
+</Defs>

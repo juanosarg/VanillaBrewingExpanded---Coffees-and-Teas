@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>VCE_RawLemon</defName>
+		<label>lemons</label>
+		<description>An acid and sour tasting fruit. The juice, zest, and pulp are often used in cooking, often on fish and other meat for better taste. Lemon is also used to flavour drinks, such as lemonade, or mixed with tea and coffee.</description>
+		<soundInteract>Grain_Drop</soundInteract>
+		<soundDrop>Grain_Drop</soundDrop>	
+
+		<graphicData>
+
+			<texPath>Things/Items/Raw/VBE_Lemons</texPath>
+
+		</graphicData>
+		<thingCategories>
+			<li>VCE_Fruit</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>1.2</MarketValue>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<socialPropernessMatters>true</socialPropernessMatters>
+
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<tasteThought/>
+			<foodType>VegetableOrFruit</foodType>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>RawVegetable_Eat</ingestSound>
+		</ingestible>    
+	</ThingDef>
+
+
+
+
+
+</Defs>

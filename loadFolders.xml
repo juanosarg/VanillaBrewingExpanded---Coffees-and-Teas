@@ -1,0 +1,8 @@
+<loadFolders>
+	<v1.2>
+		<li>/</li>
+		<li>1.2</li>
+		<li IfModActive="VanillaExpanded.VPlantsE">VanillaPlantsExpanded</li>
+		<li IfModActive="VanillaExpanded.VCookE">VanillaCookingExpanded</li>
+	</v1.2>
+</loadFolders>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=========================== Fruit Trees ==============================-->
+
+	<ThingDef ParentName="TreeBase">
+		<defName>VBE_LemonTree</defName>
+		<label>lemon tree</label>
+		<description>A tall tree native to both deserts and tropics alike. Bright, sour lemons grow profusely on this tree, some lemons may even mature early and fall to the ground before the primary harvest is ready.</description>
+		<thingClass>VanillaBrewingExpanded.Plant_AutoProduce</thingClass>
+		<graphicData>
+			<texPath>Things/Plants/Trees/VBE_TreeLemon</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.15, 0.3, 0.15)</volume>
+				<offset>(0,0,-0.38)</offset>
+			</shadowData>
+		</graphicData>
+		<selectable>true</selectable>
+
+		<statBases>
+			<Beauty>2</Beauty>
+			<Nutrition>1.25</Nutrition>
+		</statBases>
+
+		<ingestible />
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+			<growDays>32.51</growDays>
+			<visualSizeRange>0.8~2.0</visualSizeRange>
+			<sowMinSkill>6</sowMinSkill>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+			<fertilityMin>0.7</fertilityMin>
+			<topWindExposure>0.05</topWindExposure>
+			<mustBeWildToSow>false</mustBeWildToSow>
+			<immatureGraphicPath>Things/Plants/Trees/VBE_TreeLemon_Immature</immatureGraphicPath>
+			<leaflessGraphicPath>Things/Plants/Trees/VBE_TreeLemon_Leafless</leaflessGraphicPath>
+			<harvestWork>800</harvestWork>
+			<harvestTag>Standard</harvestTag>
+			<harvestYield>50</harvestYield>
+			<harvestedThingDef>VCE_RawLemon</harvestedThingDef>
+			<harvestFailable>true</harvestFailable>
+			<harvestAfterGrowth>0.20</harvestAfterGrowth>
+		</plant>
+	</ThingDef>
+
+
+
+
+</Defs>
