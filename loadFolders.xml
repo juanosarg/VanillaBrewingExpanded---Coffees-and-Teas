@@ -4,5 +4,7 @@
 		<li>1.2</li>
 		<li IfModActive="VanillaExpanded.VPlantsE">VanillaPlantsExpanded</li>
 		<li IfModActive="VanillaExpanded.VCookE">VanillaCookingExpanded</li>
+		<li IfModActive="VanillaExpanded.VPlantsE_copy">VanillaPlantsExpanded</li>
+		<li IfModActive="VanillaExpanded.VCookE_copy">VanillaCookingExpanded</li>
 	</v1.2>
 </loadFolders>
