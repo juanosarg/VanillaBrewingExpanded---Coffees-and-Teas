@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Argentinian Mate - Mixed Herbs</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- AMB Lemons to eureka lemons -->
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_LemonTree"]/label</xpath>
+					<value>
+						<label>eureka lemon tree</label>		
+					</value>
+				</li>
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_LemonTree"]/description</xpath>
+					<value>
+						<description>A bushy, semi-tropical tree dotted with eureka lemons, a citric fruit used as base to prepare different drinks and meals.\nEureka lemons are very acid on its own, eating them raw is not so enjoyable and may produce tooth sensitivity.</description>		
+					</value>
+				</li>
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_RawLemon"]/label</xpath>
+					<value>
+						<label>eureka lemons</label>		
+					</value>
+				</li>
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_RawLemon"]/description</xpath>
+					<value>
+						<description>Yellow citric fruits, while not so sweet like most other fruits, mixing lemon juice with sugar allows the creation of lemonade, a refreshing and healthy drink.\nEureka lemons are very acid on its own, eating them raw is not so enjoyable and may produce tooth sensitivity.</description>		
+					</value>
+				</li>
+				<!-- AMB Mint to spearmint -->
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_MintPlant"]/label</xpath>
+					<value>
+						<label>spearmint plant</label>		
+					</value>
+				</li>
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_MintPlant"]/description</xpath>
+					<value>
+						<description>Mentha Spicata, the most popular type of mint. Spearmint has an invasive taste, added in small quantities it can give a magic taste to Mate.</description>		
+					</value>
+				</li>
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_MintLeaves"]/label</xpath>
+					<value>
+						<label>spearmint leaves</label>		
+					</value>
+				</li>
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName="AMB_MintLeaves"]/description</xpath>
+					<value>
+						<description>Spearmint leaves, used to flavour mate with an unique taste.\n\nSpearmint dries very fast upon being harvested, and it loses its taste, so be sure to make Mate with it as soon as possible.</description>		
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
