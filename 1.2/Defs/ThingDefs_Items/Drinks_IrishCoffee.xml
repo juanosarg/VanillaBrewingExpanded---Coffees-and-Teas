@@ -119,7 +119,7 @@
 			<li>
 			<restFallFactor>0.84</restFallFactor>
 				<statOffsets>
-					<GlobalLearningFactor>1.16</GlobalLearningFactor>
+					<GlobalLearningFactor>0.16</GlobalLearningFactor>
 					<WorkSpeedGlobal>0.16</WorkSpeedGlobal>
 				</statOffsets>				
 			</li>

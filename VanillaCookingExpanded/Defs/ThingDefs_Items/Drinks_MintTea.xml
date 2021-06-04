@@ -82,7 +82,7 @@
 		<comps>
 			<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
 				<thoughtDefs>
-					<li>VBE_DrankTea</li>
+					<li>VBE_DrankMintTea</li>
 				</thoughtDefs>
 			</li>
 		</comps>
@@ -90,7 +90,7 @@
 			<li>
 				<restFallFactor>0.90</restFallFactor>
 				<statOffsets>
-					<ImmunityGainSpeedFactor>1.15</ImmunityGainSpeedFactor>
+					<ImmunityGainSpeedFactor>0.15</ImmunityGainSpeedFactor>
 					<SocialImpact>0.1</SocialImpact>
 				</statOffsets>				
 			</li>
