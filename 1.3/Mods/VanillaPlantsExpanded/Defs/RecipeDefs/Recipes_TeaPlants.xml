@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+
+	<RecipeDef>
+		<defName>VBE_MakeLemonTea</defName>
+		<label>make lemon tea</label>
+		<description>Make a dark tea cut with water, chilled and garnished with a wedge of bright lemon.</description>
+		<jobString>Making lemon tea.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawLemon</li>
+
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>	
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>VCE_RawLemon</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>VCE_RawLemon</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_LemonTea>10</VBE_LemonTea>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_MakeEarlGreyTea</defName>
+		<label>make earl grey tea</label>
+		<description>Make a very strong and semi-sweet fruity tea. Floral notes dance around one's pallet at even the most dull scent. People who finish the drink feel strangely urged to colonize.</description>
+		<jobString>Making earl grey tea.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawOrange</li>
+
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>	
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>VCE_RawOrange</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>VCE_RawOrange</li>
+
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_EarlGreyTea>10</VBE_EarlGreyTea>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+
+
+
+
+
+
+</Defs>

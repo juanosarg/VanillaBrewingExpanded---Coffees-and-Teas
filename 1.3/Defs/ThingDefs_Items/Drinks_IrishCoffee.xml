@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DrugBase">
+		<defName>VBE_IrishCoffee</defName>
+		<label>irish coffee</label>
+		<description>Whiskey and coffee blended thoroughly before forming a head and being topped with a spoonful of whipped cream. Perfect for those who just got out of bed and are already wanting to go back to it.</description>
+
+		<graphicData>
+			<texPath>Things/Items/Drinks/VBE_IrishCoffee</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>VBE_DrinksSimpleSpirits</li>
+		</thingCategories>
+		<tickerType>Rare</tickerType>
+		
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>25</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.07</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.12</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+						<ingestHoldUsesTable>false</ingestHoldUsesTable>
+
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.2</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>VBE_IrishCoffeeHigh</hediffDef>
+					<severity>1</severity>
+					<toleranceChemical>VBE_Caffeine</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.02</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>				
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>VBE_CaffeineTolerance</hediffDef>
+					<severity>0.016</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li> 
+			</outcomeDoers>
+		</ingestible>
+		
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>VBE_Caffeine</chemical>
+				<addictiveness>0.0075</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.025</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<li Class="CompProperties_Ingredients" />
+			
+		</comps>
+		
+		
+	</ThingDef>
+
+
+
+
+	
+
+	<HediffDef>
+		<defName>VBE_IrishCoffeeHigh</defName>
+		<label>irish coffee high</label>
+		<labelNoun>an irish coffee high</labelNoun>
+		<description>Caffeine naturally found in coffee once metabolised increases the stimuli in one's nervous system, suppressing ones urge to sleep, as well as clearing ones mind. Increases learning speed by a 16% amount and 16% reduction in rest fall rate. Increases global work speed by 16%. Hot coffee reduces hypothermia.</description>
+		<hediffClass>VanillaBrewingExpanded.Hediff_HotCoffee</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Drunk</stateEffecter>
+				<severityIndices>3~5</severityIndices>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-4.8</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+
+			<li>
+			<restFallFactor>0.84</restFallFactor>
+				<statOffsets>
+					<GlobalLearningFactor>0.16</GlobalLearningFactor>
+					<WorkSpeedGlobal>0.16</WorkSpeedGlobal>
+				</statOffsets>				
+			</li>
+		</stages>
+	</HediffDef>
+	
+	
+	
+	<ThoughtDef>
+		<defName>VBE_IrishCoffeeHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>VBE_IrishCoffeeHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Live Now, Sleep Later</label>
+				<description>That coffee hit the spot, now let’s get some work done.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+
+		</stages>
+	</ThoughtDef>
+	
+	
+
+
+	
+
+
+
+</Defs>

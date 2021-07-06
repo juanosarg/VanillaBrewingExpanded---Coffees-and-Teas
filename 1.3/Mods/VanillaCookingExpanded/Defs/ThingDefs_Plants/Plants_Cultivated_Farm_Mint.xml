@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="PlantBase">
+							<defName>VBE_MintPlant</defName>
+							<label>mint plant</label>
+							<description>A plant sprouting into an array of mint leaves. Mint leaves are infamous for their cooling effect on one's mouth, as well as ease of seeping into an array of teas or delicately garnishing a dish. Flourishes indoors and in plant pots, while being pleasant to look at.</description>
+							<statBases>
+								<MaxHitPoints>65</MaxHitPoints>
+								<Nutrition>0.2</Nutrition>
+								<Beauty>1</Beauty>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Plants/Crops/VBE_MintPlant</texPath>
+								<graphicClass>Graphic_Random</graphicClass>
+							</graphicData>
+							<selectable>true</selectable>
+							<pathCost>10</pathCost>
+							<ingestible />
+							<plant>
+								<fertilityMin>0.70</fertilityMin>
+								<fertilitySensitivity>0.50</fertilitySensitivity>
+								<dieIfLeafless>true</dieIfLeafless>
+								<harvestTag>Standard</harvestTag>
+								<maxMeshCount>1</maxMeshCount>
+								<harvestedThingDef>VBE_MintLeaves</harvestedThingDef>
+								<harvestYield>2</harvestYield>
+								<harvestWork>200</harvestWork>
+								<sowTags>
+									<li>Ground</li>
+									<li>Hydroponic</li>
+									<li>Decorative</li>
+								</sowTags>
+								<topWindExposure>0.1</topWindExposure>
+								<growDays>6.4</growDays>
+
+								<visualSizeRange>0.4~1</visualSizeRange>
+								<wildOrder>2</wildOrder>
+								<purpose>Food</purpose>
+							</plant>
+						</ThingDef>
+
+
+
+
+</Defs>

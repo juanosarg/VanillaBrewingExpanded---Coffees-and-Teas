@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Genetic Rim</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+
+
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_BrewLatteCoffee"]/ingredients/li[@Name="VBE_MilkIngredient"]/filter/thingDefs</xpath>
+					<value>
+						<li>GR_BearffaloMilk</li>
+						<li>GR_ThrumffaloMilk</li>
+						<li>GR_MuffalochickenMilk</li>
+						<li>GR_ChickenffaloMilk</li>
+						<li>GR_MuffalobearMilk</li>
+						<li>GR_WolffaloMilk</li>
+						<li>GR_RatMilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_BrewLatteCoffee"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_BearffaloMilk</li>
+						<li>GR_ThrumffaloMilk</li>
+						<li>GR_MuffalochickenMilk</li>
+						<li>GR_ChickenffaloMilk</li>
+						<li>GR_MuffalobearMilk</li>
+						<li>GR_WolffaloMilk</li>
+						<li>GR_RatMilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_BrewLatteCoffee"]/defaultIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_BearffaloMilk</li>
+						<li>GR_ThrumffaloMilk</li>
+						<li>GR_MuffalochickenMilk</li>
+						<li>GR_ChickenffaloMilk</li>
+						<li>GR_MuffalobearMilk</li>
+						<li>GR_WolffaloMilk</li>
+						<li>GR_RatMilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_MakeBlackTea"]/ingredients/li[@Name="VBE_MilkIngredient"]/filter/thingDefs</xpath>
+					<value>
+						<li>GR_BearffaloMilk</li>
+						<li>GR_ThrumffaloMilk</li>
+						<li>GR_MuffalochickenMilk</li>
+						<li>GR_ChickenffaloMilk</li>
+						<li>GR_MuffalobearMilk</li>
+						<li>GR_WolffaloMilk</li>
+						<li>GR_RatMilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_MakeBlackTea"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_BearffaloMilk</li>
+						<li>GR_ThrumffaloMilk</li>
+						<li>GR_MuffalochickenMilk</li>
+						<li>GR_ChickenffaloMilk</li>
+						<li>GR_MuffalobearMilk</li>
+						<li>GR_WolffaloMilk</li>
+						<li>GR_RatMilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName = "VBE_MakeBlackTea"]/defaultIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>GR_BearffaloMilk</li>
+						<li>GR_ThrumffaloMilk</li>
+						<li>GR_MuffalochickenMilk</li>
+						<li>GR_ChickenffaloMilk</li>
+						<li>GR_MuffalobearMilk</li>
+						<li>GR_WolffaloMilk</li>
+						<li>GR_RatMilk</li>
+					</value>
+				</li>
+
+
+				
+
+
+
+
+
+
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

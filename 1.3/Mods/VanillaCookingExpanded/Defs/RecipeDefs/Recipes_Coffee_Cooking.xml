@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+
+	<RecipeDef>
+		<defName>VBE_BrewMintCoffee</defName>
+		<label>brew mint coffee</label>
+		<description>Brew a bitter espresso mixed with cream or milk, then further mixed with mint oil and garnished. Cool and velvety coffee gives way to an even cooler, soothing aftertaste, not to mention great smelling breath.</description>
+		<jobString>Brewing mint coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>	
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>
+
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_MintLeaves</li>
+
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>
+				<li>VBE_MintLeaves</li>
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>	
+				<li>VBE_HotCoffee</li>		
+				<li>VBE_MintLeaves</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_MintCoffee>10</VBE_MintCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_BrewDalgonaCoffee</defName>
+		<label>brew dalgona coffee</label>
+		<description>Brew a trendy, newer drink in the world of coffee rumored to originate from far off steamworlds. Coffee granules are rapidly mixed with sugar to form a thick, luxuriously sweet foam. Afterwards the foam is dispersed over deeply chilled milk before drinking.</description>
+		<jobString>Brewing dalgona coffee.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>	
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>
+
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSugar</li>
+
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>
+				<li>VCE_RawSugar</li>
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_IceCoffee</li>	
+				<li>VBE_HotCoffee</li>		
+				<li>VCE_RawSugar</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_DalgonaCoffee>10</VBE_DalgonaCoffee>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
+
+</Defs>

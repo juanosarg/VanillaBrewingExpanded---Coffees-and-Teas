@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DrugBase">
+		<defName>VBE_EarlGreyTea</defName>
+		<label>earl grey tea</label>
+		<description>A very strong and semi-sweet fruity tea. Floral notes dance around one's pallet at even the most dull scent. People who finish the drink feel strangely urged to colonize.</description>
+
+		<graphicData>
+			<texPath>Things/Items/Drinks/VBE_EarlGreyTea</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>VBE_DrinksNonAlcoholic</li>
+		</thingCategories>
+
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>10</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.1</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.15</joy>     
+
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<tasteThought>VBE_DrankEarlGreyTea</tasteThought>
+		</ingestible>
+
+		<techLevel>Neolithic</techLevel>
+		<comps>     
+
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			</li>
+		</comps>
+
+	</ThingDef>
+
+	<ThoughtDef>	
+		<defName>VBE_DrankEarlGreyTea</defName>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>VBE_DrankEarlGreyTea</hediff>
+		<durationDays>0.2</durationDays>
+		<stages>
+			<li>
+				<label>Tea. Earl Grey. Hot</label>
+				<description>Make it so.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>	
+
+	</ThoughtDef>
+
+	<HediffDef>
+		<defName>VBE_DrankEarlGreyTea</defName>
+		<label>drank earl grey tea</label>
+		<makesSickThought>false</makesSickThought>
+		<description>Tannins naturally found in tea once metabolised increases the stimuli in ones nervous system, suppressing ones urge to sleep, as well as boosting ones immune system. Increases immunity gain speed by 15% and provides 10% reduction in rest fall rate for 5 hours. Earl grey tea provides a 10% research speed bonus.</description>
+		<tendable>false</tendable>
+		<isBad>false</isBad>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
+				<thoughtDefs>
+					<li>VBE_DrankEarlGreyTea</li>
+				</thoughtDefs>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<restFallFactor>0.90</restFallFactor>
+				<statOffsets>
+					<ImmunityGainSpeedFactor>0.15</ImmunityGainSpeedFactor>
+					<ResearchSpeed>0.1</ResearchSpeed>	
+				</statOffsets>				
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+
+</Defs>

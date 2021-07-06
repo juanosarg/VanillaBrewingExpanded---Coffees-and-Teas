@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+
+	<RecipeDef>
+		<defName>VBE_MakeTeaFast</defName>
+		<label>make fast tea</label>
+		<description>Make a pleasing, aromatic beverage prepared by steeping a bag of tea leaves in boiling water. Brewing tea in this specially prepared espresso machine is generally much faster.</description>
+		<jobString>Making fast tea.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_RawTea</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_RawTea</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_RawTea</li>
+				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_Tea>5</VBE_Tea>
+		</products>
+		<researchPrerequisite>Brewing</researchPrerequisite>		
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>VBE_MakeBlackTea</defName>
+		<label>make black tea</label>
+		<description>Make a particularly bitter tea cut with creamy milk, wakes one up a bit and relaxes one's mind.</description>
+		<jobString>Making black tea.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li Name="VBE_MilkIngredient">
+				<filter>
+					<thingDefs>
+						<li>Milk</li>						
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>Milk</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>Milk</li>				
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_BlackTea>10</VBE_BlackTea>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VBE_MakeYuenYeung</defName>
+		<label>make yuenyeung</label>
+		<description>Make a mixture of coffee and tea. Tea and coffee drinkers respectively set their differences aside while concocting this unholy amalgamation. Whether it’s served hot or cold it’s equally confusing to the imbiber.</description>
+		<jobString>Making yuenyeung.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_IceCoffee</li>
+						<li>VBE_HotCoffee</li>					
+					</thingDefs>
+				</filter>
+				<count>0.7</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>						
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>VBE_IceCoffee</li>
+				<li>VBE_HotCoffee</li>						
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_Yuenyeung>10</VBE_Yuenyeung>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>VBE_MakeKombucha</defName>
+		<label>make kombucha tea</label>
+		<description>Make a sugary tea left out to ferment, after fermenting the end product is a sweet and sour, sometimes even naturally fizzy drink known as kombucha. Praised for health benefits, though some remain skeptical.</description>
+		<jobString>Making kombucha tea.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>600</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<recipeUsers>
+			<li>VBE_EspressoMachineBuilding</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VBE_Tea</li>
+					</thingDefs>
+				</filter>
+				<count>0.8</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawFungus</li>
+									
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>	
+				<li>RawFungus</li>
+										
+			</thingDefs>
+			<categories>				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>VBE_Tea</li>
+				<li>RawFungus</li>
+									
+			</thingDefs>
+			<categories>				
+			</categories>
+		</defaultIngredientFilter>		
+		<products>
+			<VBE_Kombucha>10</VBE_Kombucha>
+		</products>
+		<researchPrerequisite>VBE_EspressoMachine</researchPrerequisite>		
+	</RecipeDef>
+
+
+
+
+
+
+
+</Defs>

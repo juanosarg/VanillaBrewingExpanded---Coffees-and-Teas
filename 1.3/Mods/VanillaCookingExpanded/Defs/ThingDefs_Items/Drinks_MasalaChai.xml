@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="DrugBase">
+		<defName>VBE_MasalaChai</defName>
+		<label>masala chai</label>
+		<description>A musty, warm, almost woody tea crafted by simple leaves and complex spices. Alleged to be good against high cholesterol.</description>
+		<graphicData>
+			<texPath>Things/Items/Drinks/VBE_MasalaChai</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>VBE_DrinksNonAlcoholic</li>
+		</thingCategories>
+
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>12</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.08</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.12</joy>     
+
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<tasteThought>VBE_DrankMasalaChai</tasteThought>
+		</ingestible>
+
+		<techLevel>Neolithic</techLevel>
+		<comps>     
+
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			</li>
+		</comps>
+
+	</ThingDef>
+
+	<ThoughtDef>	
+		<defName>VBE_DrankMasalaChai</defName>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>VBE_DrankMasalaChai</hediff>
+		<durationDays>0.2</durationDays>
+		<stages>
+			<li>
+				<label>Fancied a zesty cuppa</label>
+				<description>A delightfully complex cup of spicy masala chai really brightens the day.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>	
+
+	</ThoughtDef>
+
+	<HediffDef>
+		<defName>VBE_DrankMasalaChai</defName>
+		<label>drank masala chai</label>
+		<makesSickThought>false</makesSickThought>
+		<description>Tannins naturally found in tea once metabolised increases the stimuli in ones nervous system, suppressing ones urge to sleep, as well as boosting ones immune system. Increases immunity gain speed by 15% and provides 10% reduction in rest fall rate for 5 hours. Masala chai reduces the effects of Cholesterol if present.</description>
+		<tendable>false</tendable>
+		<isBad>false</isBad>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
+				<thoughtDefs>
+					<li>VBE_DrankMasalaChai</li>
+				</thoughtDefs>
+				<hediffReduction>VCE_Cholesterol</hediffReduction>
+				<reductionAmount>0.03</reductionAmount>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<restFallFactor>0.9</restFallFactor>
+				<statOffsets>
+					<ImmunityGainSpeedFactor>0.15</ImmunityGainSpeedFactor>
+
+				</statOffsets>				
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+</Defs>

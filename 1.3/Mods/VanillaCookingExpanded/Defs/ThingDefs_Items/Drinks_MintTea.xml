@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="DrugBase">
+		<defName>VBE_MintTea</defName>
+		<label>mint tea</label>
+		<description>Black tea leaves mixed with mint leaves and deeply steeped, then garnished with additional mint leaves. Leaves your breath surprisingly fresh.</description>
+
+		<graphicData>
+			<texPath>Things/Items/Drinks/VBE_MintTea</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>VBE_DrinksNonAlcoholic</li>
+		</thingCategories>
+
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>8</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.08</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.12</joy>     
+
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<tasteThought>VBE_DrankMintTea</tasteThought>
+		</ingestible>
+
+		<techLevel>Neolithic</techLevel>
+		<comps>     
+
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			</li>
+		</comps>
+
+	</ThingDef>
+
+	<ThoughtDef>	
+		<defName>VBE_DrankMintTea</defName>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>VBE_DrankMintTea</hediff>
+		<durationDays>0.2</durationDays>
+		<stages>
+			<li>
+				<label>Refreshing tea</label>
+				<description>A delightfully fresh cup of mint tea really brightens the day.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>	
+
+	</ThoughtDef>
+
+	<HediffDef>
+		<defName>VBE_DrankMintTea</defName>
+		<label>drank mint tea</label>
+		<makesSickThought>false</makesSickThought>
+		<description>Tannins naturally found in tea once metabolised increases the stimuli in ones nervous system, suppressing ones urge to sleep, as well as boosting ones immune system. Increases immunity gain speed by 15% and provides 10% reduction in rest fall rate for 5 hours. Mint tea provides fresh breath, increasing social impact by 10%.</description>
+		<tendable>false</tendable>
+		<isBad>false</isBad>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
+				<thoughtDefs>
+					<li>VBE_DrankMintTea</li>
+				</thoughtDefs>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<restFallFactor>0.90</restFallFactor>
+				<statOffsets>
+					<ImmunityGainSpeedFactor>0.15</ImmunityGainSpeedFactor>
+					<SocialImpact>0.1</SocialImpact>
+				</statOffsets>				
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+</Defs>

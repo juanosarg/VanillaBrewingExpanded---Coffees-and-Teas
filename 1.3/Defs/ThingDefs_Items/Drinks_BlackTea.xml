@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="DrugBase">
+		<defName>VBE_BlackTea</defName>
+		<label>black tea</label>
+		<description>A particularly bitter tea cut with creamy milk, wakes one up and helps cure ailments.</description>
+		<graphicData>
+			<texPath>Things/Items/Drinks/VBE_BlackTea</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>VBE_DrinksNonAlcoholic</li>
+		</thingCategories>
+		
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>11</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.1</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.15</joy>     
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<tasteThought>VBE_DrankBlackTea</tasteThought>
+		</ingestible>
+		
+		<techLevel>Neolithic</techLevel>
+		<comps>     
+			
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			</li>
+		</comps>
+		
+	</ThingDef>
+	
+	<ThoughtDef>	
+		<defName>VBE_DrankBlackTea</defName>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>VBE_DrankBlackTea</hediff>
+		<durationDays>0.2</durationDays>
+		<stages>
+			<li>
+				<label>An inspiring Cup</label>
+				<description>A delightfully intense cup of black tea really brightens the day.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>	
+		
+	</ThoughtDef>
+	
+	<HediffDef>
+		<defName>VBE_DrankBlackTea</defName>
+		<label>drank black tea</label>
+		<makesSickThought>false</makesSickThought>
+		<description>Tannins naturally found in tea once metabolised increases the stimuli in ones nervous system, suppressing ones urge to sleep, as well as boosting ones immune system. Increases immunity gain speed by 20% and provides 15% reduction in rest fall rate for 5 hours.</description>
+		<tendable>false</tendable>
+		<isBad>false</isBad>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="VanillaCookingExpanded.HediffCompProperties_WhileHavingThoughts">
+				<thoughtDefs>
+					<li>VBE_DrankBlackTea</li>
+				</thoughtDefs>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<restFallFactor>0.85</restFallFactor>
+				<statOffsets>
+					<ImmunityGainSpeedFactor>0.20</ImmunityGainSpeedFactor>
+
+				</statOffsets>				
+			</li>
+		</stages>
+	</HediffDef>
+	
+
+
+
+
+</Defs>
