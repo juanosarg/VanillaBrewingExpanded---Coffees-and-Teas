@@ -16,7 +16,7 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>	
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>		
 		<recipeUsers>
 			<li>VBE_EspressoMachineBuilding</li>			
 		</recipeUsers>
@@ -76,7 +76,7 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>	
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>		
+		<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>		
 		<recipeUsers>
 			<li>VBE_EspressoMachineBuilding</li>			
 		</recipeUsers>
