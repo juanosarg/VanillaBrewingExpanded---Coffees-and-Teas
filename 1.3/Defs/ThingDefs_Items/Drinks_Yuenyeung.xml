@@ -100,7 +100,7 @@
 			<restFallFactor>0.87</restFallFactor>
 				<statOffsets>
 					<GlobalLearningFactor>0.15</GlobalLearningFactor>
-					<ImmunityGainSpeedFactor>0.15</ImmunityGainSpeedFactor>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
 				</statOffsets>				
 			</li>
 		</stages>
