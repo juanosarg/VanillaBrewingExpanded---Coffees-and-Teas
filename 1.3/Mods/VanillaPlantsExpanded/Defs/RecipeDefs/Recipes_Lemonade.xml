@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RecipeDef>
+        <defName>VBE_MixLemonade</defName>
+        <label>mix lemonade</label>
+        <description>Squeeze a few lemons, mix the juice with water and add some sugar.</description>
+        <jobString>Mixing lemonade.</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Brewing</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <recipeUsers>
+            <li>Brewery</li>
+            <li>VBE_Bar</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VCE_RawLemon</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+           
+        </ingredients>
+        <products>
+            <VBE_Lemonade>20</VBE_Lemonade>
+        </products>
+    </RecipeDef>
+
+</Defs>

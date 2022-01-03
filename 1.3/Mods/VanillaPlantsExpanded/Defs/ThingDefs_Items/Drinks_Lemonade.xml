@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="VBE_DrugToolBase">
+        <defName>VBE_Lemonade</defName>
+        <label>lemonade</label>
+        <description>A sweet beverage mixed together with lemon juice, sugar, and water.</description>
+        <graphicData>
+            <texPath>Things/Items/Drinks/VBE_Lemonade</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <thingCategories>
+            <li>VBE_DrinksNonAlcoholic</li>
+        </thingCategories>
+        <rotatable>false</rotatable>
+        <tradeability>Buyable</tradeability>
+        <stackLimit>40</stackLimit>
+        <statBases>
+            <DeteriorationRate>0.5</DeteriorationRate>
+            <MarketValue>2.99</MarketValue>
+            <Mass>0.25</Mass>
+            <WorkToMake>500</WorkToMake>
+            <Nutrition>0.16</Nutrition>
+        </statBases>
+        <ingestible>
+            <foodType>Fluid, Processed</foodType>
+            <joyKind>Gluttonous</joyKind>
+            <joy>0.2</joy>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Beer</ingestSound>
+            <ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+            <ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<tasteThought>VBE_DrankLemonadeThought</tasteThought>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1000</listOrder>
+                <overdoseSeverityOffset>0</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>
