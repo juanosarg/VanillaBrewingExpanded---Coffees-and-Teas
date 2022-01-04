@@ -32,6 +32,7 @@
 	</modDependencies>
 	<loadAfter>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>VanillaExpanded.VBrewE</li>
 	</loadAfter>
 	
 	
